@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic');
+
+html,body {
+	margin: 0;
+	padding: 0;
+	background: -webkit-linear-gradient(top, #a0d8ef 0%,#ddf1f9 58%,#feffff 100%);
+}
+
+#discribe {
+	padding-top: 20px;
+	padding-left: 20px; 
+	font-size: 20px;
+	font-family: "Lobster", Arial, sans-serif;
+	
+}
+
+#anketa {
+	font-family: "Lobster", Arial, sans-serif;
+	font-size: 42px;
+	padding-bottom: 20px; 
+	text-align: center;
+}
+
+.form {
+	margin-top: -16px;
+
+}
+
+#forma > ol {
+	width: 1800px;
+    
+}
+
+#zgoda {
+	margin-left: 30px; 	
+}
+
+button {
+	margin-left: 30px; 
+}
+
+.footer {
+	padding-bottom: 20px;
+
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Реєстраційна анкета учасника конкурсу «Вчитель-новатор»</title>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style12.css">
+</head>
+<body>
+	<div id="discribe"><hr>Шановний учаснику конкурсу «Вчитель-новатор»!<br>
+	Заповніть, будь ласка, реєстраційну анкету українською мовою.<br>
+	Прохання надати повну відповідь на всі поставлені запитання.<br>
+	Якщо ви подаєте декілька конкурсних робіт, будь ласка,<br>
+	заповніть дану анкету для кожної конкурсної роботи окремо.<br>
+	Дякуємо Вам за участь у конкурсі та бажаємо успіхів!<br><hr>
+	</div>
+	<p id="anketa">АНКЕТА</p>
+	<div class="form"><form action="/php/form.php" method="GET">
+	<p><ol>
+		<li><p><input type="text" name="surname" placeholder="Прізвище"></p></li>
+		<li><p><input type="text" placeholder="Ім’я та по-батькові"></p></li>
+		<li><p><input type="text" placeholder="Назва конкурсної роботи"></p></li>
+		<li><label>Номінація конкурсної роботи (список для вибору)</label><br>
+				<p><select>
+  					<option>Навчальний проект</option>
+ 					<option>Виховний проект</option>
+ 					<option>Позашкільний проект</option>
+ 					<option>Навчальний контент</option>
+  					<option>Он-лайновий освітній ресурс</option>
+ 					<option>Навчально-методичне забезпечення</option> 				
+				</select></p></li>
+		<li><p><input type="text" placeholder="Навчальна дисципліна (наприклад, біологія)"></p></li>
+		<li><label>Чи була апробована ваша робота?</label><br>
+			<p><label><input type="radio" name="status">Так</label>
+			<label><input type="radio" name="status">Нi</label></p></li>
+		<li><p><input type="text" placeholder="Якщо так, то на якому рівні?"></p></li>
+		<li><p><input type="text" placeholder="Повна назва установи, де ви працюєте"></p></li>
+		<li><p><input type="text" placeholder="Ваша посада"></p></li>
+		<li><p><input type="text" placeholder="Місто/населений пункт"></p></li>
+		<li><p><input type="text" placeholder="Область (на вибір 24 області + АР Крим + м. Київ + м.Севастополь)"></p></li>
+		<li><p><input type="tel" placeholder="Мобільний телефон"></p></li>
+		<li><p><input type="email" placeholder="Електронна пошта"></p></li>
+		<li><label>Ви брали участь у попередніх конкурсах  «Вчитель-новатор»?</label><br>
+			<p><label><input type="radio" name="status">Так</label>
+			<label><input type="radio" name="status">Нi</label></p></li>
+		<li><p><input type="text" placeholder="Якщо так,  то вкажіть, коли саме."></p></li>
+		<li><p>Яким чином ви дізналися про конкурс «Вчитель-новатор»? (на вибір, можна декілька варіантів)</p></li>
+			<p><input type="checkbox" name="a" value="MON"> Сайт МОН молодьспорту</p>
+			<p><input type="checkbox" name="b" value="MS"> Сайт Майкрософт Україна</p>
+			<p><input type="checkbox" name="c" value="PN"> Сайт Мережі «Партнерство в навчанні»</p>
+			<p><input type="checkbox" name="d" value="IPPO"> Обласний ІППО</p>
+			<p><input type="checkbox" name="e" value="OUO"> Обласне управління освіти</p>
+			<p><input type="checkbox" name="f" value="MUO"> Міське управління освіти</p>
+			<p><input type="checkbox" name="g" value="Osvita"> Osvita.com</p>
+			<p><input type="checkbox" name="h" value="gurt"> Gurt.org.ua</p>
+		    <p><input type="text" placeholder="...інше"></p>
+	</ol><br>
+			<p><input type="checkbox" name="zgoda" value="zgoda" id="zgoda"> Я даю згоду на обробку моїх персональних даних і погоджуюся з 
+			<a href="#">Політикою конфіденційності</a> (галочка обов'язково)</p>
+    <button class="but">Подати анкету</button>
+    <button class="but">Заповнити знову</button>
+	</div>
+	</form></p>
+</body>
+  	<footer class="footer"></footer><hr>
+</html>
+
