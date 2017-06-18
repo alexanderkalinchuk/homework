@@ -1,0 +1,98 @@
+<html>
+<head>
+<meta charset="Windows-1251">
+<title>Метод Гаусса</title>
+<body>
+<center>
+<h2>Метод Гаусса</h2>
+</center>
+<script>
+var n = Number(prompt('Введите число уравнений'));
+var arr = new Array(n);
+
+//заполняем массив arr
+for(i = 0; i < n*(n+1); i++) {
+	arr[i] = Number(prompt('Введите последовательно каждый коэффициент всех уравнений'));
+	}
+
+var x = 1;
+var y = 1;
+
+// ПРЯМОЙ ХОД
+function gauss() {
+
+	//расчет C	
+	var c = new Array(n-1);
+
+	
+	for(i = 1; i <=(n-1); i++) {
+		c[i] = - arr[(n+1) * i + (n+2) * v] / arr[(n+2) * v];
+	}
+
+	//убираем x1
+	var j = 0;
+	var k = 1;
+
+	for(i = y*(n+1); i < arr.length; i++) {
+		arr[i] = arr[i] + c[k] * arr[j+(n+1)*v];
+		j = j + 1;
+		if (j == n+1) {
+			k = k + 1;
+			var j = 0;
+		}
+	}
+}	
+
+//запуск функции gauss
+for (v = 0; v <= (n-2); v++){
+	gauss();	
+	y = y + 1;	
+	
+}
+
+	// ОБРАТНЫЙ ХОД
+
+var x = new Array();
+for (j = 0; j<(n-1); j++){
+
+
+var alpha = new Array(n-1);
+	for (i = 1; i < n; i++){
+	alpha[i] = - arr[(arr.length-2 - (n+1) * i) - (n+2) * j] / arr[arr.length-2 - (n+2) * j];
+	}
+
+
+
+	for (i = 1; i < n; i++){
+	
+	arr[(arr.length-1) - (n + 1) * i - (n+1) * j] = arr[(arr.length-1) - (n + 1) * i - (n+1) * j] + alpha[i] * arr[(arr.length-1) - (n + 1) * j];
+	
+	}
+}	
+
+//Вычисляем неизвестные
+function xxx() {
+	var x = new Array();
+		for (i = 0, j = 0; i < n; i++, j++) {
+
+		x[i] = arr[arr.length-1 - (n + 1) * j] / arr[arr.length - 2 - (n + 2) * i];
+		x[i] = x[i].toFixed(3);
+		}
+		x.reverse();
+
+//Вывод неизвестных значений	
+document.write("Соответственно х1, х2 и т.д. равны:  <table border='1'>");		
+document.write("<tr>");
+for(j=0; j <= n-1; ++j) {
+	document.write("<td>" + x[j] + "</td>");
+}
+document.write("</tr>");
+document.write("</table>");
+					
+}
+
+xxx();
+
+</script>
+</body
+</html>
