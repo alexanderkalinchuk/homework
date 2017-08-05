@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+
+</head>
+
+<style>
+		#block {
+		height: 25px;
+		width: 25px;
+		background-color: green;
+		position: relative;
+	}
+</style>
+
+<script>
+
+ function moveReact(e) {
+	var div1 = document.getElementById("block");
+  	var KEY_LEFT = 37; //константы для удобства чтения
+  	var KEY_TOP = 38;
+    var KEY_RIGHT = 39;
+  	var KEY_BOTTOM = 40;
+  	var KEY_R = 82;
+  	var KEY_G = 71;
+  	var KEY_B = 66;
+
+	switch(e.keyCode){
+         
+        case KEY_LEFT:  
+			div1.style.left += "-10px";
+            break;
+
+        case KEY_TOP:   
+			div1.style.top = "-10px";
+            break;
+
+        case KEY_RIGHT:   
+			div1.style.right = "-10px";
+            break;
+
+        case KEY_BOTTOM: 
+			div1.style.bottom = "-10px";
+            break;
+
+        case KEY_R: 
+			div1.style.backgroundColor = "red";
+            break;
+
+        case KEY_G: 
+			div1.style.backgroundColor = "green";
+            break;
+
+        case KEY_B: 
+			div1.style.backgroundColor = "blue";
+            break;
+}
+
+	
+}
+addEventListener("keydown", moveReact);
+
+</script>
+
+<body>
+
+	<div id='block'></div>
+
+</body>
+</html>
